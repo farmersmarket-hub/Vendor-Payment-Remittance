@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Payment Remittance Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+	  background: linear-gradient(to bottom right, #fcd3e1, #c71585); /* light to dark fuchsia */
+	  min-height: 100vh;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  overflow: hidden;
+	}
+    .glass {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 700px;
+      height: 85vh;
+      overflow-y: auto;
+    }
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="glass p-6">
+    <h2 class="text-2xl font-bold text-center mb-4 text-gray-900">Vendor Payment Remittance Form</h2>
+    <form>
+      <div class="mb-4">
+        <label>Market Date<span class="text-red-500"> *</span></label>
+        <input type="date" class="w-full p-2 border rounded bg-white" required />
+      </div>
+      <div class="mb-4">
+        <label>Vendor PIN<span class="text-red-500"> *</span></label>
+        <input type="text" class="w-full p-2 border rounded bg-white" required />
+      </div>
+      <div class="mb-4">
+        <label>Vendor ID<span class="text-red-500"> *</span></label>
+        <input type="text" class="w-full p-2 border rounded bg-white" required />
+      </div>
+      <div class="mb-4">
+        <label>Vendor Payment Type<span class="text-red-500"> *</span></label>
+        <select class="w-full p-2 border rounded bg-white" required>
+          <option value="">- Select Payment Type -</option>
+          <option value="Direct Deposit">Direct Deposit</option>
+          <option value="Check Pickup">Check Pickup</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label>Invoice Number<span class="text-red-500"> *</span></label>
+        <input type="text" class="w-full p-2 border rounded bg-white" required />
+      </div>
+      <div class="text-center">
+        <button type="submit" class="submit-btn bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-6 py-2 rounded-full font-semibold">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
